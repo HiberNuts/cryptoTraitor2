@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faEthereum } from '@fortawesome/free-brands-svg-icons'
 const Footer = () => {
   return (
-    <footer class="   pt-8 pb-6">
+    <footer class="pt-8 pb-6">
     <div >
       <div class="flex-auto flex-wrap text-center lg:text-center">
         <div class="w-full  px-4 flex-auto">

@@ -8,7 +8,7 @@ import { Box, Button, CircularProgress, Modal, Typography } from "@mui/material"
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import "./App.css";
 import CancelIcon from "@mui/icons-material/Cancel";
-// import bgvideos from "./video/bgvideo.mp4";
+import bgvideos from "./video/bgvideo.mp4";
 const style = {
   position: "absolute",
   top: "50%",
@@ -142,12 +142,10 @@ function App() {
   }, [CurrentAccount, chain]);
 
   return (
-   <div className="App">
-
-    <div className="App-1">
-      {/* <video autoplay loop muted>
+    <div className="App">
+      <video id="video" autoplay loop muted>
         <source src={bgvideos} type="video/mp4"></source>
-      </video> */}
+      </video>
       <div className="wrapper"></div>
       <div className="container">
         <Navbar
@@ -165,7 +163,7 @@ function App() {
           setnoOfMint={setnoOfMint}
           askContractToMintNft={askContractToMintNft}
         />
-       
+
         <Modal open={loading} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
           <Box sx={style}>
             <CircularProgress />
@@ -202,12 +200,8 @@ function App() {
             </Typography>
           </Box>
         </Modal>
+        <Footer />
       </div>
-    </div>
-    {/* footer */}
-    <div>
-    <Footer/>
-    </div>
     </div>
   );
 }
